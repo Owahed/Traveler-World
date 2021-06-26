@@ -17,7 +17,7 @@ const AddBlog = () => {
       description: data.description,
       imageURL: imageURL,
     };
-    const url = `http://localhost:5005/addBlog`;
+    const url = `https://fast-peak-49025.herokuapp.com/addBlog`;
 
     console.log(eventData);
     fetch(url, {

@@ -7,7 +7,7 @@ import SideBar from './SideBar';
 const MakeAdmin = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5005/adminEmail', {
+        fetch('https://fast-peak-49025.herokuapp.com/adminEmail', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)

@@ -31,7 +31,7 @@ const NavBar = () => {
               <li className="nav-item">
                 <NavLink
                   exact
-                  to="/tvShow"
+                  to="/shopDetail"
                   activeClassName="active"
                   className="nav-links"
                   onClick={handleClick}

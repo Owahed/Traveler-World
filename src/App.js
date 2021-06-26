@@ -16,6 +16,8 @@ import Login from './Components/Login/Login';
 import PrivateRoute from './Components/Login/PrivateRoute';
 import BlogDetail from './Components/Home/Blog/BlogDetail';
 import MakeAdmin from './Components/Admin/MakeAdmin';
+import Shop from './Components/Admin/Shop';
+import ShopDetail from './Components/ShopDetail/ShopDetail';
 
 export const UserContext = createContext()
 
@@ -46,6 +48,12 @@ function App() {
             </Route>
             <Route path="/makeAdmin">
               <MakeAdmin />
+            </Route>
+            <Route path="/shop">
+              <Shop />
+            </Route>
+            <Route path="/shopDetail">
+              <ShopDetail />
             </Route>
             <Route path="/blog/:id">
               <BlogDetail />

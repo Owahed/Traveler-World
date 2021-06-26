@@ -6,12 +6,12 @@ const SideBar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [isAdmin, setIsAdmin] = useState(false);
     const adminEmail = isAdmin[0]?.email;
-    
+
     // setLoggedInUser(adminEmail);
 
 
     useEffect(() => {
-        fetch('http://localhost:5005/isAdmin?email=' + loggedInUser?.email)
+        fetch('https://fast-peak-49025.herokuapp.com/isAdmin?email=' + loggedInUser?.email)
             .then(res => res.json())
             .then(data => setIsAdmin(data));
     }, [])
@@ -31,14 +31,21 @@ const SideBar = () => {
                     </svg>
                     <Link to="/manageBlogs">Manage Blog</Link>
                 </div>
-                  <br />
-                <div  class="flex">
+                <br />
+                <div class="flex">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM11 14a1 1 0 11-2 0 1 1 0 012 0zm0-7a1 1 0 10-2 0v3a1 1 0 102 0V7z" clipRule="evenodd" />
                     </svg>
                     <Link to="/makeAdmin">Make Admin</Link>
                 </div>
-                
+                <br />
+                <div class="flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                    </svg>
+                    <Link to="/shop">Shop</Link>
+                </div>
+
             </div>
                 :
                 <h2>Email Can't find <br /> You can login <br /> Email:test@test.com <br /> Password:#2021dev</h2>}

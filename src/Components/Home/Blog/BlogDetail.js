@@ -12,7 +12,7 @@ const BlogDetail = () => {
     console.log(blogData)
 
     useEffect(() => {
-        fetch('http://localhost:5005/blogs')
+        fetch('https://fast-peak-49025.herokuapp.com/blogs')
             .then(res => res.json())
             .then(data => setBlogDetail(data))
     }, []);

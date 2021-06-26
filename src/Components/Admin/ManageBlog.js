@@ -25,7 +25,7 @@ const ManageBlog = () => {
     // console.log(books);
 
     useEffect(() => {
-        fetch('http://localhost:5005/blogs')
+        fetch('https://fast-peak-49025.herokuapp.com/blogs')
             .then(res => res.json())
             .then(data => setBooks(data))
     }, []);
@@ -33,7 +33,7 @@ const ManageBlog = () => {
 
     const deleteProduct = (event, id) => {
 
-        fetch(`http://localhost:5005/delete/${id}`, {
+        fetch(`https://fast-peak-49025.herokuapp.com/delete/${id}`, {
             method: 'DELETE',
 
         })
