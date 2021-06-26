@@ -1,5 +1,6 @@
 import React from 'react';
 import './OurServices.css'
+import Fade from 'react-reveal/Fade';
 
 const OurServices = () => {
     return (
@@ -9,7 +10,9 @@ const OurServices = () => {
             <p>No hidden fees, equipment rentals, or installation appointments.</p>
         </div>
         <div className="card-body">
-            <div className="container md:flex">
+        <Fade bottom>
+        <div >
+        <div className="container md:flex">
                 <div className="card">
                     <div className="box">
                         <div className="content">
@@ -30,6 +33,7 @@ const OurServices = () => {
                         </div>
                     </div>
                 </div>
+                
                 <div className="card">
                     <div className="box">
                         <div className="content">
@@ -40,7 +44,12 @@ const OurServices = () => {
                         </div>
                     </div>
                 </div>
+
             </div>
+            </div>
+
+        </Fade>
+            
         </div>
 
     </div>

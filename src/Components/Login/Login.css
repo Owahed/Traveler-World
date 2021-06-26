@@ -30,6 +30,13 @@ input{
     border-radius: 3px;
     cursor: pointer;
 }
+.login-google-btn{
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: slateblue;
+    color: #fff;
+    border-radius: 5px;
+}
  /* .login-content{
      margin: 0;
      padding: 0;

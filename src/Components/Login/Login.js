@@ -171,7 +171,7 @@ const Login = () => {
                user.success && <p style={{ color: 'green' }}>User {newUser ? "creat" : "logged in"} successfully</p>
            }
 
-           <button onClick={handelGoogleSignIn}>Sign In using Google</button>
+           <button class="login-google-btn" onClick={handelGoogleSignIn}>Sign In using Google</button>
            <p>{user.displayName}</p>
            <p>{newUser.displayName}</p>
 

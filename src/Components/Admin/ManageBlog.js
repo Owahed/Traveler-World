@@ -11,6 +11,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
+import SideBar from './SideBar';
 
 const useStyles = makeStyles({
     table: {
@@ -47,12 +48,12 @@ const ManageBlog = () => {
     // --------------------------------------------
     const classes = useStyles();
     return (
-        <div>
-            <div style={{ textAlign: 'center', padding: '5%' }}>
-                <Link to='/addBlog'>Add book</Link>
+        <div class="md:flex bg-red-200 h-screen h-full">
+            <div className="p-14">
+                <SideBar/>
             </div>
 
-            <TableContainer component={Paper}>
+            <TableContainer className="p-14" component={Paper}>
                 <Table className={classes.table} aria-label="simple table">
                     <TableHead>
                         <TableRow>
@@ -72,8 +73,9 @@ const ManageBlog = () => {
                                 <TableCell align="right">-</TableCell>
                                 <TableCell align="right">{row.amount}</TableCell>
 
-                                <TableCell align="right"><Button onClick={(event) => deleteProduct(event, row._id)} variant="contained" color="secondary">Delete</Button></TableCell>
+                                <TableCell align="right"><Button onClick={(event) => {if(window.confirm('Are you sure to delete this blog?')){ deleteProduct(event, row._id)};}} variant="contained" color="secondary">Delete</Button></TableCell>
                             </TableRow>
+                            //onClick={(event) => deleteProduct(event, row._id)}
                         ))}
                     </TableBody>
                 </Table>

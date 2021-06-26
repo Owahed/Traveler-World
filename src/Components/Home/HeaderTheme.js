@@ -1,4 +1,5 @@
 import React from 'react';
+import Zoom from 'react-reveal/Zoom';
 
 const HeaderTheme = () => {
     return (
@@ -12,10 +13,17 @@ const HeaderTheme = () => {
         
             backgroundImage: `url("https://i.ibb.co/4W4cxhK/beautiful-scenery-fog-covering-mountains-great-wallpaper-1.jpg" )` 
           }}>
-           <div class="mb-16 ">
+           
+           <div>
+        <Zoom>
+          <div>
+          <div class="mb-16 ">
            <h2 class="text-5xl ">Top Amazing Places to Go in Summer</h2>
            <p>NOVEMBER 6, 2018PAUL NEWMAN</p>
            </div>
+          </div>
+        </Zoom>
+      </div>
         </div>
     );
 };
