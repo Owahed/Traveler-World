@@ -26,6 +26,7 @@ const Shop = () => {
           body: JSON.stringify(eventData)
         })
           .then(res => console.log('server', res))
+          alert('Product Added successfully')
       };
     
       const handelImageUpload = event => {
@@ -37,7 +38,7 @@ const Shop = () => {
         axios.post('https://api.imgbb.com/1/upload/books', imageData)
           .then(function (response) {
             setImageURL(response.data.data.display_url);
-            alert('Product Add successfully')
+            
           })
           .catch(function (error) {
             console.log(error);
